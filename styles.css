@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Вертикално подреждане */
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative; /* Позволява позициониране на дъното */
+}
+img {
+    max-width: 100%; /* Ограничаване на ширината според контейнера */
+    height: auto; /* Поддържане на съотношението на изображението */
+    border-radius: 8px; /* Добавяне на заоблени краища за снимките */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Лека сянка за стил */
+    margin: 10px auto; /* Центриране на снимките със пространство около тях */
+}
+.character-img {
+    width: 55px; /* Задайте точна ширина за по-добър контрол */
+    height: 55px; /* Задайте точна височина, за да са унифицирани */
+    border-radius: 50%; /* Прави снимките кръгли */
+    object-fit: cover; /* Центрира изображението в рамките и изрязва излишното */
+    border: 3px solid rgba(255, 255, 255, 0.5); /* Добавя светла рамка */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Леко засенчване за елегантен ефект */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при взаимодействие */
+}
+
+.character-img:hover {
+    transform: scale(1.1); /* Увеличаване при задържане */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Засилено засенчване при задържане */
+}
+.navigation {
+    display: flex;
+    justify-content: space-between; /* Разпределя бутоните вляво и вдясно */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.navigation-top {
+    position: absolute;
+    top: 20px; /* Бутоните горе */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation-top a {
+    padding: 12px 22px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+
+.navigation-top a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navigation-bottom {
+    position: absolute;
+    bottom: 20px; /* Позиционира "НАЗАД" най-долу */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation a {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачен фон */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Променя цвета при задържане */
+}
+
+.book-page {
+    width: 75%;
+    max-width: 850px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Прозрачен размазан фон */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 18px;
+    color: rgba(0, 0, 0, 0.95);
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
